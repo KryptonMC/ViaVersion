@@ -10,6 +10,7 @@ dependencyResolutionManagement {
         maven("https://nexus.velocitypowered.com/repository/velocity-artifacts-snapshots/")
         maven("https://repo.spongepowered.org/repository/maven-public/")
         maven("https://libraries.minecraft.net")
+        maven("https://repo.kryptonmc.org/releases")
         mavenCentral()
     }
     // only use these repos
@@ -41,6 +42,7 @@ setupViaSubproject("velocity")
 setupViaSubproject("sponge")
 setupViaSubproject("sponge-legacy")
 setupViaSubproject("fabric")
+setupViaSubproject("krypton")
 
 setupSubproject("viaversion") {
     projectDir = file("universal")

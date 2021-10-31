@@ -15,6 +15,7 @@ val platforms = setOf(
     projects.viaversionBukkit,
     projects.viaversionBungee,
     projects.viaversionFabric,
+    projects.viaversionKrypton,
     projects.viaversionSponge,
     projects.viaversionVelocity
 ).map { it.dependencyProject }

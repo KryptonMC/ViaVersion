@@ -8,6 +8,7 @@ fastutil = "8.5.6"
 flare = "2.0.0"
 openNBT = "2.0-SNAPSHOT"
 javassist = "3.28.0-GA"
+kotlin = "1.5.31"
 
 # Common provided
 netty = "4.0.20.Final"
@@ -24,6 +25,7 @@ bungee = "1.17-R0.1-SNAPSHOT"
 sponge = "5.0.0"
 legacySponge = "4.0.0"
 velocity = "3.0.0-SNAPSHOT"
+krypton = "0.44.6"
 
 
 [libraries]
@@ -39,6 +41,7 @@ flare = { group = "space.vectrix.flare", name = "flare", version.ref = "flare" }
 flareFastutil = { group = "space.vectrix.flare", name = "flare-fastutil", version.ref = "flare" }
 openNBT = { group = "com.viaversion", name = "opennbt", version.ref = "openNBT" }
 javassist = { group = "org.javassist", name = "javassist", version.ref = "javassist" }
+kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
 
 netty = { group = "io.netty", name = "netty-all", version.ref = "netty" }
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
@@ -54,6 +57,9 @@ bungee = { group = "net.md-5", name = "bungeecord-api", version.ref = "bungee" }
 sponge = { group = "org.spongepowered", name = "spongeapi", version.ref = "sponge" }
 legacySponge = { group = "org.spongepowered", name = "spongeapi", version.ref = "legacySponge" }
 velocity = { group = "com.velocitypowered", name = "velocity-api", version.ref = "velocity" }
+kryptonApi = { group = "org.kryptonmc", name = "krypton-api", version.ref = "krypton" }
+krypton = { group = "org.kryptonmc", name = "krypton-server", version.ref = "krypton" }
+kryptonAP = { group = "org.kryptonmc", name = "krypton-annotation-processor", version.ref = "krypton" }
 
 
 [bundles]
