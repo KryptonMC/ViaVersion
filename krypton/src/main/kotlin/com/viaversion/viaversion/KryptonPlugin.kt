@@ -29,6 +29,7 @@ import org.kryptonmc.api.command.meta.simpleCommandMeta
 import org.kryptonmc.api.entity.player.Player
 import org.kryptonmc.api.event.Listener
 import org.kryptonmc.api.event.server.ServerStartEvent
+import org.kryptonmc.api.event.server.ServerStopEvent
 import org.kryptonmc.api.plugin.annotation.DataFolder
 import org.kryptonmc.api.plugin.annotation.Plugin
 import org.kryptonmc.api.scheduling.Scheduler
@@ -72,6 +73,11 @@ class KryptonPlugin @Inject constructor(
 
         if (server.pluginManager.isLoaded("viabackwards")) MappingDataLoader.enableMappingsCache()
         (Via.getManager() as ViaManagerImpl).init()
+    }
+
+    @Listener
+    fun onStop(event: ServerStopEvent) {
+        (Via.getManager() as ViaManagerImpl).destroy()
     }
 
     override fun getApi(): ViaAPI<Player> = api
