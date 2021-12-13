@@ -9,9 +9,15 @@ import java.util.UUID
 
 class KryptonCommandSender(private val sender: Sender) : ViaCommandSender {
 
-    override fun getName(): String = (sender as? Player)?.profile?.name ?: sender.name.toLegacySectionText()
+    override fun getName(): String {
+        if (sender is Player) return sender.profile.name
+        return sender.name.toLegacySectionText()
+    }
 
-    override fun getUUID(): UUID = (sender as? Player)?.uuid ?: UUID.fromString(name)
+    override fun getUUID(): UUID {
+        if (sender is Player) return sender.uuid
+        return UUID.fromString(name)
+    }
 
     override fun hasPermission(permission: String): Boolean = sender.hasPermission(permission)
 

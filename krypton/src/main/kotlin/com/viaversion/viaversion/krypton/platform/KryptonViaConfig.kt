@@ -12,9 +12,11 @@ class KryptonViaConfig(configFile: File) : AbstractViaConfig(configFile) {
 
     override fun getDefaultConfigURL(): URL? = javaClass.classLoader.getResource("assets/viaversion/config.yml")
 
-    override fun handleConfig(config: MutableMap<String, Any>?) {}
+    override fun handleConfig(config: MutableMap<String, Any>?) {
+        // do nothing
+    }
 
-    override fun getUnsupportedOptions() = UNSUPPORTED
+    override fun getUnsupportedOptions(): List<String> = UNSUPPORTED
 
     companion object {
 

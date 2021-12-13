@@ -25,7 +25,7 @@ bungee = "1.17-R0.1-SNAPSHOT"
 sponge = "5.0.0"
 legacySponge = "4.0.0"
 velocity = "3.0.0-SNAPSHOT"
-krypton = "0.44.6"
+krypton = "0.59.2"
 
 
 [libraries]

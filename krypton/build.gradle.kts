@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.5.31"
-    kotlin("kapt") version "1.6.0-RC"
+    kotlin("jvm") version "1.6.0"
+    kotlin("kapt") version "1.6.0"
 }
 
 dependencies {
@@ -13,7 +13,7 @@ dependencies {
 
 tasks.compileKotlin {
     kotlinOptions {
-        jvmTarget = "16"
+        jvmTarget = "17"
         freeCompilerArgs = listOf("-Xjvm-default=enable")
     }
 }

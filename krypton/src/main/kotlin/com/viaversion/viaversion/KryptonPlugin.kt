@@ -120,11 +120,14 @@ class KryptonPlugin @Inject constructor(
     override fun isPluginEnabled(): Boolean = true
 
     override fun kickPlayer(uuid: UUID, message: String): Boolean {
-        server.player(uuid)?.disconnect(LegacyComponentSerializer.legacySection().deserialize(message)) ?: return false
+        val player = server.player(uuid) ?: return false
+        player.disconnect(LegacyComponentSerializer.legacySection().deserialize(message))
         return true
     }
 
-    override fun onReload() = Unit
+    override fun onReload() {
+        // do nothing
+    }
 
     override fun runAsync(runnable: Runnable): PlatformTask<*> = runSync(runnable)
 
@@ -144,7 +147,8 @@ class KryptonPlugin @Inject constructor(
 
     companion object {
 
-        val COMPONENT_SERIALIZER = LegacyComponentSerializer.builder()
+        @JvmField
+        val COMPONENT_SERIALIZER: LegacyComponentSerializer = LegacyComponentSerializer.builder()
             .character(ChatColorUtil.COLOR_CHAR)
             .extractUrls()
             .build()
