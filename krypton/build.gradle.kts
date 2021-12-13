@@ -7,7 +7,9 @@ dependencies {
     implementation(projects.viaversionCommon)
     compileOnly(libs.kotlin)
     compileOnly(libs.kryptonApi)
-    compileOnly(libs.krypton)
+    compileOnly(libs.krypton) {
+        exclude("ca.spottedleaf", "dataconverter")
+    }
     kapt(libs.kryptonAP)
 }
 
